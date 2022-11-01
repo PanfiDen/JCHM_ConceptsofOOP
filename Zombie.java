@@ -11,7 +11,7 @@ public class Zombie extends Enemy{
     @Override
     public void attackHero(Hero hero) {
         if(getHealth() > 0) {
-            System.out.println("Зомбі атакує " + hero.getTypeHero());
+            System.out.println("Zombie attacks a " + hero.getTypeHero());
             hero.takeDamage(damage);
         }
     }
@@ -22,8 +22,8 @@ public class Zombie extends Enemy{
             if (getHealth() < 0) {
                 setHealth(0);
             }
-            System.out.println("Герой завдає зомбі " + damage + " од. шкоди");
-            System.out.println("У зомбі залишлось " + getHealth() + " здоров'я " + "\n" + "----------------------------------------------");
+            System.out.println("Hero inflicts " + damage +" points on the zombie damage");
+            System.out.println("Zombie has " + getHealth() + " health left" + "\n" + "----------------------------------------------");
             if (getHealth() <= 0) {
                 superPower();
             }
@@ -31,14 +31,14 @@ public class Zombie extends Enemy{
 
     @Override
     public String getNameEnemy() {
-        return nameEnemy = "Зомбі";
+        return nameEnemy = "Zombie";
     }
 
     public void superPower(){
         if(!isReincarnation) {
             setHealth(20);
-            System.out.println("Зомбі востає з мертвих");
-            System.out.println("У зомбі залишлось " + getHealth() + " здоров'я" + "\n" + "----------------------------------------------");
+            System.out.println("Zombie rises from the dead");
+            System.out.println("Zombie has " + getHealth() + " health left" + "\n" + "----------------------------------------------");
             isReincarnation = !isReincarnation;
         }
 

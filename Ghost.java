@@ -11,7 +11,7 @@ public class Ghost extends Enemy{
     @Override
     public void attackHero(Hero hero) {
         if(getHealth() >0) {
-            System.out.println("Привид атакує " + hero.getTypeHero());
+            System.out.println("Ghost attacks a " + hero.getTypeHero());
             hero.takeDamage(damage);
         }
     }
@@ -25,20 +25,20 @@ public class Ghost extends Enemy{
             if (getHealth() < 0) {
                 setHealth(0);
             }
-            System.out.println("Герой завдає Привид " + damage + " од. шкоди");
-            System.out.println("У привида залишлось " + getHealth() + " здоров'я " + "\n" + "----------------------------------------------");
+            System.out.println("Hero inflicts " + damage + " points on the ghost damage");
+            System.out.println("Ghost has " + getHealth() + " health left" + "\n" + "----------------------------------------------");
         }
         evenTakeDamage = !evenTakeDamage;
     }
 
     @Override
     public String getNameEnemy() {
-        return nameEnemy = "Привид";
+        return nameEnemy = "Ghost";
     }
 
     public void superPower(){
-        System.out.println("Герой промахнувся!");
-        System.out.println("У привида залишлось " + getHealth() + " здоров'я" + "\n" + "----------------------------------------------");
+        System.out.println("Hero missed!");
+        System.out.println("Ghost has " + getHealth() + " health left" + "\n" + "----------------------------------------------");
 
     }
 }

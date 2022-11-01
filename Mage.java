@@ -1,7 +1,7 @@
 public class Mage extends Hero{
     static int damage = 9;
 
-    String typeHero = "Маг";
+    String typeHero = "Mage";
 
     @Override
     public String getTypeHero() {
@@ -15,7 +15,7 @@ public class Mage extends Hero{
 
     @Override
     public void attackEnemy(Enemy enemy){
-        System.out.println("Маг атакує " + enemy.getNameEnemy());
+        System.out.println("Mage attacks a " + enemy.getNameEnemy());
         enemy.takeDamage(damage);
     }
 }

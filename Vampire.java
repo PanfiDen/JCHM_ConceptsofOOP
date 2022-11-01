@@ -12,7 +12,7 @@ public class Vampire extends Enemy{
     @Override
     public void attackHero(Hero hero) {
         if(getHealth() > 0) {
-            System.out.println("Вампір атакує " + hero.getTypeHero());
+            System.out.println("Vampire attacks a " + hero.getTypeHero());
             hero.takeDamage(damage);
             if (isSecondAttack) {
                 superPower();
@@ -27,19 +27,19 @@ public class Vampire extends Enemy{
         if (getHealth() < 0) {
             setHealth(0);
         }
-        System.out.println("Герой завдає вампіру " + damage + " од. шкоди");
-        System.out.println("У вампіра залишлось " + getHealth() + " здоров'я " + "\n" + "----------------------------------------------");
+        System.out.println("Hero inflicts " + damage + " points on the vampire damage");
+        System.out.println("Vampire has" + getHealth() + " health left" + "\n" + "----------------------------------------------");
     }
 
     @Override
     public String getNameEnemy() {
-        return nameEnemy = "Вампір";
+        return nameEnemy = "Vampire";
     }
 
     public void superPower(){
         setHealth(getHealth() + 3);
-        System.out.println("Вампір восстановлює 3 од. здоров'я");
-        System.out.println("У вампіра залишлось " + getHealth() + " здоров'я" + "\n" + "----------------------------------------------");
+        System.out.println("The vampire restores 3 units of health");
+        System.out.println("Vampire has" + getHealth() + " health left" + "\n" + "----------------------------------------------");
 
     }
 

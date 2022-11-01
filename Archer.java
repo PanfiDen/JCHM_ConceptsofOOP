@@ -4,7 +4,7 @@ public class Archer extends Hero{
         super(name, health);
     }
 
-    String typeHero = "Лучник";
+    String typeHero = "Archer";
 
     @Override
     public String getTypeHero() {
@@ -13,7 +13,7 @@ public class Archer extends Hero{
 
     @Override
     public void attackEnemy(Enemy enemy){
-        System.out.println("Лучник атакує " + enemy.getNameEnemy());
+        System.out.println("Archer attacks a " + enemy.getNameEnemy());
         enemy.takeDamage(damage);
     }
 }
